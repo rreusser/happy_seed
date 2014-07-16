@@ -81,6 +81,11 @@ if yes?( "You would like to install angular?" )
   packages << "angular"
 end
 
+if yes?( "You would like to install server-side geoip lookup?" )
+  generate "happy_seed:geolocation"
+  packages << "geolocation"
+end
+
 puts "Setting up git"
 git :init
 git add: "."
